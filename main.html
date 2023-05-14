@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width" initial scale=1.0>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+	<title>Calculator</title>
+</head>
+<body>
+	<div class="container" style="text-align: center;">
+	<h1>winner</h1>
+<p id="demo" style="color: red"></p>
+<br>
+<br>
+<button onclick="getRandomItem()" style="color: red" data-toggle="modal" data-target="#myModal" value="click here">clickhere</button>
+
+<script>
+	const array =[100,200,300,400,500,600,700,800,900]
+
+function getRandomItem() {
+  const randomIndex = Math.floor(Math.random() * array.length);
+  const item = array[randomIndex];
+
+console.log(item);
+document.getElementById("demo").innerHTML=item;
+
+document.getElementById("resultOne").innerHTML=item;
+
+}
+
+</script>
+
+<div class="row">
+
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Here is the Winner</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+         WINNER<p id="resultOne"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+</div>
+</body>
+</html>
